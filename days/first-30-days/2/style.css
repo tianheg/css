@@ -12,6 +12,7 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+
 @media (max-width: 600px) {
   .containers {
     flex-direction: column;
@@ -22,16 +23,26 @@ h2 {
   text-align: center;
   margin: 0 1rem;
 }
+
 @media (prefers-reduced-motion: no-preference) {
   .container .img-left {
     animation-name: fastFadein;
     animation-duration: 3s;
     animation-iteration-count: infinite;
   }
+
   .container .img-right {
     animation-name: slowFadein;
     animation-duration: 3s;
     animation-iteration-count: infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .container .img-left,
+  .container .img-right {
+    animation: none;
   }
 }
 
@@ -40,16 +51,19 @@ h2 {
     opacity: 1;
     filter: brightness(0) blur(0);
   }
+
   100% {
     opacity: 1;
     filter: brightness(1) blur(0);
   }
 }
+
 @keyframes slowFadein {
   0% {
     opacity: 0;
     filter: brightness(1) blur(20px);
   }
+
   15% {
     opacity: 1;
     filter: brightness(2) blur(10px);
