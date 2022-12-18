@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  font-size: 62.5%;
+}
+
 html {
   overflow-y: auto;
   background: #faf3e6;
@@ -14,6 +18,7 @@ body {
   font: 112.5%/1.3 -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
   color: #3f3d3a;
   overflow: hidden;
+  font-size: 1.6rem;
 }
 
 body::before,
@@ -96,13 +101,35 @@ p {
 }
 
 h1 {
-  font-size: 6.05em;
+  font-size: 6.05rem;
   line-height: 1;
   font-weight: 400;
   font-style: italic;
   letter-spacing: 0.05em;
   text-transform: capitalize;
 }
+
+/* TABLE layout */
+table {
+  border-collapse: collapse;
+}
+th, td {
+  border: .1rem solid black;
+  padding: 0 1rem 0 1rem;
+}
+thead th {
+  width: 25%;
+  background-color: grey;
+}
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 2rem 0;
+  font-size: 2.5rem;
+  text-align: center;
+}
+/* --- */
 
 @media (min-width: 600px) {
   body {
