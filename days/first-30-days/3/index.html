@@ -5,12 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day3 in CSS: Getting started with CSS</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="../../../assets/fonts.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -19,23 +14,38 @@
         <h1>Firefox is cool!</h1>
         <img src="firefox-dev-edition-logo.svg" alt="" />
       </div>
-      <p>I use Firefox Developer Edition as my daily web browser.</p>
+      <p class="para1" id="para1">
+        I use Firefox Developer Edition as my daily web browser.
+      </p>
       <p>
         This is a paragraph of text. In the text is a
-        <span>span element</span> and also a <a href="https://#" title="This is a link">link</a>.
+        <span>span element</span> and also a
+        <a href="https://#" title="This is a link">link</a>.
       </p>
       <div class="lists">
-      <ul role="list">
-        <li data-icon="🦄">Apple</li>
-        <li data-icon="🌈">Banana</li>
-        <li data-icon="😎">Orange</li>
-      </ul>
+        <ul role="list">
+          <li data-icon="🦄">Apple</li>
+          <li data-icon="🌈">Banana</li>
+          <li data-icon="😎">Orange</li>
+        </ul>
 
-      <ol role="list">
-        <li>Apple</li>
-        <li style="--li-bg: darkcyan">Banana</li>
-        <li style="--li-bg: navy">Orange</li>
-      </ol></div>
+        <ol role="list">
+          <li>Apple</li>
+          <li style="--li-bg: darkcyan">Banana</li>
+          <li style="--li-bg: navy">Orange</li>
+        </ol>
+      </div>
+      <div class="function outer">
+        <div class="box">The inner box is 90% - 3rem.</div>
+      </div>
+      <div class="flexbox2">
+        <div class="outer">
+          <div class="box"></div>
+        </div>
+        <div class="outer">
+          <div class="box"></div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

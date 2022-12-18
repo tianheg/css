@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font: 112.5%/1.3 "Bodoni Moda", serif;
+  font: 112.5%/1.3 -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
   color: #3f3d3a;
   overflow: hidden;
 }
@@ -28,7 +28,7 @@ body::before {
   border-left: 45px solid #faf3e6;
   border-right: 45px solid #faf3e6;
   border-top: 45px solid transparent;
-  background: #f7644d url('img/img-halftone.png') repeat;
+  background: #f7644d url('img/halftone.png') repeat;
   margin: 0 auto -45px;
 }
 
@@ -75,6 +75,7 @@ iframe {
 h1,
 h2,
 h3 {
+  font-family: "Pacifico", cursive;
   text-align: center;
   color: #272625;
   text-transform: uppercase;
@@ -147,6 +148,7 @@ h1 {
     margin-bottom: 0;
     line-height: 1.275em;
   }
+
   ul {
     list-style: none;
   }
