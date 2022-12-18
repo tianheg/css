@@ -1,3 +1,7 @@
+@charset "UTF-8";
+@import '../../../assets/fonts.css';
+
+// @namespace
 * {
   box-sizing: border-box;
 }
@@ -97,7 +101,7 @@ main {
   }
 
   p {
-    color: green;
+    color: black;
   }
 
   p:nth-child(3) {
@@ -110,6 +114,14 @@ main {
     justify-content: space-around;
     margin-bottom: 1rem;
 
+    :is(ul, ol) > li {
+      display: grid;
+      grid-template-columns: 0 1fr;
+      gap: 2.75rem;
+      align-items: start;
+      line-height: 1.5;
+    }
+
     ul,
     ol {
       margin: 0;
@@ -117,14 +129,6 @@ main {
       list-style: none;
       display: grid;
       gap: 1rem;
-
-      li {
-        display: grid;
-        grid-template-columns: 0 1fr;
-        gap: 2.75rem;
-        align-items: start;
-        line-height: 1.5;
-      }
     }
 
     ul > li::before {
@@ -204,4 +208,124 @@ main {
       }
     }
   }
+
+  .counter-style {
+    & > ul {
+      list-style: blacknwhite;
+    }
+  }
+
+  .shorthands {
+    & > div {
+      // As long as these are defined before font-size, they can be placed in any order. Including line-height is likewise optional but may be declared only after font-size and only following a forward slash
+      // https://developer.mozilla.org/en-US/docs/Web/CSS/font#syntax
+      // https://css-tricks.com/almanac/properties/f/font/
+      font: expanded italic small-caps bold 50px/2 'Indie Flower', cursive;
+      border: 1rem dotted rgba(1, 1, 1, 1);
+      padding: 1rem 0.2rem 1rem 0.2rem;
+      text-align: center;
+      margin: 1rem 0.2rem 1rem 0.2rem;
+      background: content-box no-repeat
+          linear-gradient(217deg, rgba(255, 0, 0, 0.6), rgba(255, 0, 0, 0) 66%),
+        linear-gradient(127deg, rgba(0, 255, 0, 0.6), rgba(0, 255, 0, 0) 66%),
+        linear-gradient(336deg, rgba(0, 0, 255, 0.6), rgba(0, 0, 255, 0) 66%);
+    }
+  }
+
+  .css-work {
+    & > img {
+      width: 100%;
+      height: 34rem;
+    }
+    & > p {
+      width: 500px; // fallback for old browser not support calc()
+      width: calc(100% - 400px);
+    }
+  }
+
+  .get-scss-content {
+    margin: 1rem 0 1rem 0;
+    border: .1rem solid black;
+    padding: 0 1rem 0 1rem;
+  }
+}
+
+@counter-style blacknwhite {
+  // can't place it inside cascading scss
+  system: cyclic;
+  symbols: ◆ ◇;
+  suffix: ' ';
+}
+@supports (transform: rotate(0.5turn)) {
+}
+@supports (
+  (perspective: 10px) or (-moz-perspective: 10px) or (-webkit-perspective: 10px)
+    or (-ms-perspective: 10px) or (-o-perspective: 10px)
+) {
+}
+@supports not ((text-align-last: justify) or (-moz-text-align-last: justify)) {
+}
+@supports (--foo: red) {
+  .class {
+    color: var(--foo);
+  }
+}
+@supports not selector(:is(a, b)) {
+  // Fallback for when :is() is unsupported
+}
+@page :first {
+}
+@font-face {
+  font-family: 'Courier New', Courier, monospace;
+  src: url();
+}
+
+@keyframes exp1 {
+  // didn't add 0%, so use selector's default value
+  // same as from/to
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes exp2 {
+}
+@keyframes exp2 {
+} // two same keyframes, use last one
+@keyframes exp3 {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  30% {
+    top: 2.5rem;
+  }
+  68%,
+  72% {
+    left: 2.5rem;
+  }
+  100% {
+    top: 5rem;
+    left: 100%;
+  }
+  // top: 0%, 30%, 100%
+  // left: 0%, 68%, 72%, 100%
+}
+@keyframes exp3 {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  30% {
+    top: 2.5rem;
+  }
+  30% {
+    top: 2rem;
+  }
+  100% {
+    left: 100% !important;
+  } // ignored
+  // 30%: top: 2rem
 }
