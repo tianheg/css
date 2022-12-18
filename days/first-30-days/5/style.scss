@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+
+.task1 {
+  #outer div ul .nav a {
+    background-color: powderblue;
+    padding: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  div div li a {
+    color: rebeccapurple;
+  }
+
+  #outer div ul .nav a {
+    background-color: unset;
+  }
+}
