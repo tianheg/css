@@ -11,6 +11,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+
   @media (max-width: 600px) {
     flex-direction: column;
   }
@@ -26,10 +27,19 @@ h2 {
       animation-duration: 3s;
       animation-iteration-count: infinite;
     }
+
     .img-right {
       animation-name: slowFadein;
       animation-duration: 3s;
       animation-iteration-count: infinite;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+
+    .img-left,
+    .img-right {
+      animation: none;
     }
   }
 }
