@@ -2,8 +2,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  font-size: 62.5%;
+}
+
 html {
-  font-size: 16px;
   font-family: "Open Sans", sans-serif;
   background-color: grey;
 }
@@ -12,6 +15,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-size: 1.6rem;
 }
 
 main {
@@ -24,6 +28,9 @@ main {
   .flexbox {
     display: flex;
     justify-content: center;
+    @media (max-width: 100em) {
+      flex-direction: column;
+    }
   }
 
   h1 {
