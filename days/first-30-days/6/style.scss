@@ -1,0 +1,83 @@
+.attribute {
+  li[class] {
+    background-color: grey;
+  }
+  li[class='a'] {
+    background-color: purple;
+  }
+  li[class~='a'] {
+    color: yellow;
+  }
+  li[class*='b'] {
+    color: darkorange;
+  }
+  li[class^='b'] {
+    color: bisque;
+  }
+  li[class$='b'] {
+    color: brown;
+  }
+}
+.case-sensitivity {
+  li[class^='a'] {
+    background-color: yellow;
+  }
+  li[class^='a' i] {
+    color: red;
+  }
+}
+.pseudo-class {
+  article {
+    p:first-child {
+      font-weight: bold;
+    }
+    p:last-child {
+      font-style: italic;
+    }
+    p:nth-child(2) {
+      font-family: 'Courier New', Courier, monospace;
+    }
+    li:only-child {
+      text-decoration: underline;
+    }
+    form {
+      display: flex;
+      label {
+        margin-inline: 1rem 1rem;
+      }
+      input:invalid {
+        background-color: ivory;
+        border: none;
+        outline: 0.1rem solid red;
+        border-radius: 0.2rem;
+      }
+    }
+  }
+  a:hover {
+    color: hotpink;
+  }
+}
+.pseudo-element {
+  article p::first-line {
+    font-weight: bold;
+  }
+}
+.before-after {
+  .box::before {
+    content: 'Hello World!(from ::before) ';
+    color: red;
+  }
+  .box::after {
+    content: ' Hello Coding!(from ::after)  ➥';
+    color: rgb(140, 140, 9);
+  }
+}
+.empty {
+  .box::before {
+    content: '';
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    background-color: rebeccapurple;
+  }
+}
