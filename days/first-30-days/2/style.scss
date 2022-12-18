@@ -1,0 +1,59 @@
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+h2 {
+  text-align: center;
+}
+
+.containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+.container {
+  text-align: center;
+  margin: 0 1rem;
+
+  @media (prefers-reduced-motion) {
+    .img-left {
+      animation-name: fastFadein;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+    .img-right {
+      animation-name: slowFadein;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+@keyframes fastFadein {
+  0% {
+    opacity: 1;
+    filter: brightness(0) blur(0);
+  }
+
+  100% {
+    opacity: 1;
+    filter: brightness(1) blur(0);
+  }
+}
+
+@keyframes slowFadein {
+  0% {
+    opacity: 0;
+    filter: brightness(1) blur(20px);
+  }
+
+  15% {
+    opacity: 1;
+    filter: brightness(2) blur(10px);
+  }
+}
