@@ -22,7 +22,7 @@ h2 {
   text-align: center;
   margin: 0 1rem;
 }
-@media (prefers-reduced-motion) {
+@media (prefers-reduced-motion: no-preference) {
   .container .img-left {
     animation-name: fastFadein;
     animation-duration: 3s;
