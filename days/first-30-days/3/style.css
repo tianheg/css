@@ -19,7 +19,6 @@ body {
 main {
   margin: 2rem 1rem;
   padding: 0 1rem;
-  position: relative;
   border: 1.2rem dotted #b3a9a9;
   border-radius: 1.2rem 1.2rem 1.2rem 1.2rem;
 }
@@ -191,6 +190,9 @@ main .get-scss-content {
   margin: 1rem 0 1rem 0;
   border: 0.1rem solid black;
   padding: 0 1rem 0 1rem;
+}
+main .get-scss-content #scssFile pre > code {
+  white-space: pre-wrap;
 }
 
 @counter-style blacknwhite {

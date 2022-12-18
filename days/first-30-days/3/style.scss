@@ -22,7 +22,6 @@ body {
 main {
   margin: 2rem 1rem;
   padding: 0 1rem;
-  position: relative;
   border: 1.2rem dotted #b3a9a9;
   border-radius: 1.2rem 1.2rem 1.2rem 1.2rem;
 
@@ -217,7 +216,9 @@ main {
 
   .shorthands {
     & > div {
-      // As long as these are defined before font-size, they can be placed in any order. Including line-height is likewise optional but may be declared only after font-size and only following a forward slash
+      // font-size is the last
+      // line-height is optional
+      // if add line-height, must this style: font-size/line-height
       // https://developer.mozilla.org/en-US/docs/Web/CSS/font#syntax
       // https://css-tricks.com/almanac/properties/f/font/
       font: expanded italic small-caps bold 50px/2 'Indie Flower', cursive;
@@ -247,6 +248,11 @@ main {
     margin: 1rem 0 1rem 0;
     border: .1rem solid black;
     padding: 0 1rem 0 1rem;
+    #scssFile {
+      pre > code {
+        white-space: pre-wrap;
+      }
+    }
   }
 }
 
