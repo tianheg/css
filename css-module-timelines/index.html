@@ -28,7 +28,6 @@
         text-decoration: none;
         display: block;
       }
-
       section {
         display: flex;
         align-items: center;
@@ -57,7 +56,7 @@
       }
 
       #tl {
-        margin: 1em;
+        margin: 0em;
       }
       #tl table {
         margin: 0 4em 15em 0;
@@ -113,7 +112,7 @@
       }
       #tl ul {
         position: relative;
-        width: calc(var(--yearWidth) * 22);
+        width: calc(var(--yearWidth) * 27);
         margin: 0;
         padding: 0;
       }
@@ -259,83 +258,86 @@
         background: #ffa;
       }
 
-      li.y1997 {
-        left: calc(var(--yearWidth) * -0.5);
-      }
-      li.y1998 {
-        left: calc(var(--yearWidth) * -0.5);
-      }
-      li.y1999 {
+      li.y1996 {
         left: 0;
       }
-      li.y2000 {
+      li.y1997 {
         left: calc(var(--yearWidth) * 1);
       }
-      li.y2001 {
+      li.y1998 {
         left: calc(var(--yearWidth) * 2);
       }
-      li.y2002 {
+      li.y1999 {
         left: calc(var(--yearWidth) * 3);
       }
-      li.y2003 {
+      li.y2000 {
         left: calc(var(--yearWidth) * 4);
       }
-      li.y2004 {
+      li.y2001 {
         left: calc(var(--yearWidth) * 5);
       }
-      li.y2005 {
+      li.y2002 {
         left: calc(var(--yearWidth) * 6);
       }
-      li.y2006 {
+      li.y2003 {
         left: calc(var(--yearWidth) * 7);
       }
-      li.y2007 {
+      li.y2004 {
         left: calc(var(--yearWidth) * 8);
       }
-      li.y2008 {
+      li.y2005 {
         left: calc(var(--yearWidth) * 9);
       }
-      li.y2009 {
+      li.y2006 {
         left: calc(var(--yearWidth) * 10);
       }
-      li.y2010 {
+      li.y2007 {
         left: calc(var(--yearWidth) * 11);
       }
-      li.y2011 {
+      li.y2008 {
         left: calc(var(--yearWidth) * 12);
       }
-      li.y2012 {
+      li.y2009 {
         left: calc(var(--yearWidth) * 13);
       }
-      li.y2013 {
+      li.y2010 {
         left: calc(var(--yearWidth) * 14);
       }
-      li.y2014 {
+      li.y2011 {
         left: calc(var(--yearWidth) * 15);
       }
-      li.y2015 {
+      li.y2012 {
         left: calc(var(--yearWidth) * 16);
       }
-      li.y2016 {
+      li.y2013 {
         left: calc(var(--yearWidth) * 17);
       }
-      li.y2017 {
+      li.y2014 {
         left: calc(var(--yearWidth) * 18);
       }
-      li.y2018 {
+      li.y2015 {
         left: calc(var(--yearWidth) * 19);
       }
-      li.y2019 {
+      li.y2016 {
         left: calc(var(--yearWidth) * 20);
       }
-      li.y2020 {
+      li.y2017 {
         left: calc(var(--yearWidth) * 21);
       }
-      li.y2021 {
+      li.y2018 {
         left: calc(var(--yearWidth) * 22);
       }
-      li.y2022 {
+      li.y2019 {
         left: calc(var(--yearWidth) * 23);
+      }
+      li.y2020 {
+        left: calc(var(--yearWidth) * 24);
+      }
+      li.y2021 {
+        left: calc(var(--yearWidth) * 25);
+      }
+      li.y2022 {
+        left: calc(var(--yearWidth) * 26);
       }
       li.m01 {
         margin-left: calc(var(--yearWidth) * 0.0833 * 1 - 8px);
@@ -376,14 +378,22 @@
     </style>
     <script>
       function classChange(c) {
-        var btn = document.getElementById(c + 'btn');
+        let btn = document.getElementById(c + 'btn');
         document.getElementById('lines').setAttribute('class', c);
       }
     </script>
   </head>
   <body id="www-meyerweb-com" class="css">
     <h1><a href="https://meyerweb.com/" target="_blank">meyerweb.com</a></h1>
-
+    <p>
+      Unlike CSS 2, which is a large single specification defining various
+      features, CSS 3 is divided into several separate documents called
+      "modules". Each module adds new capabilities or extends features defined
+      in CSS 2, preserving backward compatibility. Work on CSS level 3 started
+      around the time of publication of the original CSS 2 recommendation. The
+      earliest CSS 3 drafts were published in June 1999. --
+      <a href="https://en.wikipedia.org/wiki/CSS#CSS_3">Wikipedia</a>
+    </p>
     <div id="tl">
       <table
         id="lines"
@@ -430,6 +440,9 @@
             <th></th>
             <th>
               <ul>
+                <li class="y1996">1996</li>
+                <li class="y1997">1997</li>
+                <li class="y1998">1998</li>
                 <li class="y1999">1999</li>
                 <li class="y2000">2000</li>
                 <li class="y2001">2001</li>
@@ -452,114 +465,46 @@
                 <li class="y2018">2018</li>
                 <li class="y2019">2019</li>
                 <li class="y2020">2020</li>
+                <li class="y2021">2021</li>
+                <li class="y2022">2022</li>
               </ul>
             </th>
           </tr>
         </thead>
         <tr>
           <th>
-            <a href="https://www.w3.org/TR/2011/REC-CSS2-20110607/"
-              >Cascading Style Sheets Level 2 Revision 1 (CSS 2.1)
-              Specification</a
+            <a href="https://www.w3.org/TR/CSS1/"
+              >Cascading Style Sheets Level 1(CSS 1)</a
             >
           </th>
           <td>
             <ul>
-              <li class="y2002 m08">
+              <li class="y1996 m12">
                 <a
-                  href="https://www.w3.org/TR/2002/WD-CSS21-20020802"
-                  title="02 August 2002"
-                  >Cascading Style Sheets, level 2 revision 1</a
+                  href="https://www.w3.org/TR/REC-CSS1-961217"
+                  title="17 Dec 1996"
+                  >CSS 1</a
                 >
               </li>
-              <li class="y2003 m01">
+              <li class="y1999 m1">
                 <a
-                  href="https://www.w3.org/TR/2003/WD-CSS21-20030128"
-                  title="28 January 2003"
-                  >Cascading Style Sheets, level 2 revision 1</a
+                  href="https://www.w3.org/TR/1999/REC-CSS1-19990111"
+                  title="11 Jan 1999"
+                  >CSS 1</a
                 >
               </li>
-              <li class="y2003 m09">
+              <li class="y2008 m4">
                 <a
-                  href="https://www.w3.org/TR/2003/WD-CSS21-20030915"
-                  title="15 September 2003"
-                  >Cascading Style Sheets, level 2 revision 1</a
+                  href="https://www.w3.org/TR/2008/REC-CSS1-20080411/"
+                  title="11 Apr 2008"
+                  >CSS 1</a
                 >
               </li>
-              <li class="y2004 m02">
+              <li class="y2018 m9">
                 <a
-                  href="https://www.w3.org/TR/2004/CR-CSS21-20040225"
-                  title="25 February 2004"
-                  >Cascading Style Sheets, level 2 revision 1</a
-                >
-              </li>
-              <li class="y2005 m06">
-                <a
-                  href="https://www.w3.org/TR/2005/WD-CSS21-20050613"
-                  title="13 June 2005"
-                  >Cascading Style Sheets, level 2 revision 1</a
-                >
-              </li>
-              <li class="y2006 m04">
-                <a
-                  href="https://www.w3.org/TR/2006/WD-CSS21-20060411"
-                  title="11 April 2006"
-                  >Cascading Style Sheets, level 2 revision 1</a
-                >
-              </li>
-              <li class="y2006 m11">
-                <a
-                  href="https://www.w3.org/TR/2006/WD-CSS21-20061106"
-                  title="06 November 2006"
-                  >Cascading Style Sheets, level 2 revision 1</a
-                >
-              </li>
-              <li class="y2007 m07">
-                <a
-                  href="https://www.w3.org/TR/2007/CR-CSS21-20070719"
-                  title="19 July 2007"
-                  >Cascading Style Sheets Level 2 Revision 1 (CSS 2.1)
-                  Specification</a
-                >
-              </li>
-              <li class="y2009 m04">
-                <a
-                  href="https://www.w3.org/TR/2009/CR-CSS2-20090423"
-                  title="23 April 2009"
-                  >Cascading Style Sheets Level 2 Revision 1 (CSS 2.1)
-                  Specification</a
-                >
-              </li>
-              <li class="y2009 m09">
-                <a
-                  href="https://www.w3.org/TR/2009/CR-CSS2-20090908"
-                  title="08 September 2009"
-                  >Cascading Style Sheets Level 2 Revision 1 (CSS 2.1)
-                  Specification</a
-                >
-              </li>
-              <li class="y2010 m12">
-                <a
-                  href="https://www.w3.org/TR/2010/WD-CSS2-20101207"
-                  title="07 December 2010"
-                  >Cascading Style Sheets Level 2 Revision 1 (CSS 2.1)
-                  Specification</a
-                >
-              </li>
-              <li class="y2011 m04">
-                <a
-                  href="https://www.w3.org/TR/2011/PR-CSS2-20110412"
-                  title="12 April 2011"
-                  >Cascading Style Sheets Level 2 Revision 1 (CSS 2.1)
-                  Specification</a
-                >
-              </li>
-              <li class="y2011 m06">
-                <a
-                  href="https://www.w3.org/TR/2011/REC-CSS2-20110607/"
-                  title="07 June 2011"
-                  >Cascading Style Sheets Level 2 Revision 1 (CSS 2.1)
-                  Specification</a
+                  href="https://www.w3.org/TR/2018/SPSD-CSS1-20180913/"
+                  title="13 September 2018"
+                  >CSS 1</a
                 >
               </li>
             </ul>
@@ -567,9 +512,223 @@
         </tr>
         <tr>
           <th>
-            <a href="https://www.w3.org/TR/2019/CR-css-syntax-3-20190716/"
+            <a href="https://www.w3.org/TR/CSS2/"
+              >Cascading Style Sheets Level 2(CSS 2)</a
+            >
+          </th>
+          <td>
+            <ul>
+              <li class="y1997 m04">
+                <a
+                  href="https://www.w3.org/TR/WD-CSS2-971104/"
+                  title="04 November 1997"
+                  >CSS 2</a
+                >
+              </li>
+              <li class="y1998 m01">
+                <a
+                  href="https://www.w3.org/TR/1998/WD-css2-19980128/"
+                  title="28 Jan 1998"
+                  >CSS 2</a
+                >
+              </li>
+              <li class="y1998 m03">
+                <a
+                  href="https://www.w3.org/TR/1998/PR-CSS2-19980324/"
+                  title="24 Mar 1998"
+                  >CSS 2</a
+                >
+              </li>
+              <li class="y1998 m05">
+                <a
+                  href="https://www.w3.org/TR/1998/REC-CSS2-19980512/"
+                  title="12 May 1998"
+                  >CSS 2</a
+                >
+              </li>
+
+              <li class="y2008 m04">
+                <a
+                  href="https://www.w3.org/TR/2008/REC-CSS2-20080411/"
+                  title="11 April 2008"
+                  >CSS 2</a
+                >
+              </li>
+              <li class="y2009 m04">
+                <a
+                  href="https://www.w3.org/TR/2009/CR-CSS2-20090423/"
+                  title="23 April 2009"
+                  >CSS 2</a
+                >
+              </li>
+              <li class="y2009 m09">
+                <a
+                  href="https://www.w3.org/TR/2009/CR-CSS2-20090908/"
+                  title="08 September 2009"
+                  >CSS 2</a
+                >
+              </li>
+              <li class="y2010 m12">
+                <a
+                  href="https://www.w3.org/TR/2010/WD-CSS2-20101207/"
+                  title="07 December 2010"
+                  >CSS 2</a
+                >
+              </li>
+              <li class="y2011 m04">
+                <a
+                  href="https://www.w3.org/TR/2011/PR-CSS2-20110412/"
+                  title="12 April 2011"
+                  >CSS 2</a
+                >
+              </li>
+              <li class="y2011 m06">
+                <a
+                  href="https://www.w3.org/TR/2011/REC-CSS2-20110607/"
+                  title="07 June 2011"
+                  >CSS 2</a
+                >
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <a href="https://www.w3.org/TR/CSS21/"
+              >Cascading Style Sheets Level 2 Revision 1 (CSS 2.1)</a
+            >
+            <!-- https://www.w3.org/standards/history/CSS21 -->
+          </th>
+          <td>
+            <ul>
+              <li class="y2002 m08">
+                <a
+                  href="https://www.w3.org/TR/2002/WD-CSS21-20020802"
+                  title="02 August 2002"
+                  >CSS 2.1</a
+                >
+              </li>
+              <li class="y2003 m01">
+                <a
+                  href="https://www.w3.org/TR/2003/WD-CSS21-20030128"
+                  title="28 January 2003"
+                  >CSS 2.1</a
+                >
+              </li>
+              <li class="y2003 m09">
+                <a
+                  href="https://www.w3.org/TR/2003/WD-CSS21-20030915"
+                  title="15 September 2003"
+                  >CSS 2.1</a
+                >
+              </li>
+              <li class="y2004 m02">
+                <a
+                  href="https://www.w3.org/TR/2004/CR-CSS21-20040225"
+                  title="25 February 2004"
+                  >CSS 2.1</a
+                >
+              </li>
+              <li class="y2005 m06">
+                <a
+                  href="https://www.w3.org/TR/2005/WD-CSS21-20050613/"
+                  title="13 June 2005"
+                  >CSS 2.1</a
+                >
+              </li>
+              <li class="y2006 m04">
+                <a
+                  href="https://www.w3.org/TR/2006/WD-CSS21-20060411/"
+                  title="11 April 2006"
+                  >CSS 2.1</a
+                >
+              </li>
+              <li class="y2006 m11">
+                <a
+                  href="https://www.w3.org/TR/2006/WD-CSS21-20061106/"
+                  title="06 November 2006"
+                  >CSS 2.1</a
+                >
+              </li>
+              <li class="y2007 m07">
+                <a
+                  href="https://www.w3.org/TR/2007/CR-CSS21-20070719/"
+                  title="19 July 2007"
+                  >CSS 2.1</a
+                >
+              </li>
+              <li class="y2009 m04">
+                <a
+                  href="https://www.w3.org/TR/2009/CR-CSS2-20090423"
+                  title="23 April 2009"
+                  >CSS 2.1</a
+                >
+              </li>
+              <li class="y2009 m09">
+                <a
+                  href="https://www.w3.org/TR/2009/CR-CSS2-20090908"
+                  title="08 September 2009"
+                  >CSS 2.1</a
+                >
+              </li>
+              <li class="y2010 m12">
+                <a
+                  href="https://www.w3.org/TR/2010/WD-CSS2-20101207"
+                  title="07 December 2010"
+                  >CSS 2.1</a
+                >
+              </li>
+              <li class="y2011 m04">
+                <a
+                  href="https://www.w3.org/TR/2011/PR-CSS2-20110412"
+                  title="12 April 2011"
+                  >CSS 2.1</a
+                >
+              </li>
+              <li class="y2011 m06">
+                <a
+                  href="https://www.w3.org/TR/2011/REC-CSS2-20110607/"
+                  title="07 June 2011"
+                  >CSS 2.1</a
+                >
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <a href="https://www.w3.org/TR/CSS22/"
+              >Cascading Style Sheets Level 2 Revision 2 (CSS 2.2)</a
+            >
+          </th>
+          <td>
+            <ul>
+              <li class="y2016 m04">
+                <a
+                  href="https://www.w3.org/TR/2016/WD-CSS22-20160412/"
+                  title="12 April 2016"
+                  >CSS 2.2</a
+                >
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <p style="color: red">All of the following are CSS3 modules</p>
+          </th>
+        </tr>
+        <!-- 
+REFERENCES: https://www.w3.org/TR/CSS/#css
+
+ -->
+
+        <tr>
+          <th>
+            <a href="https://www.w3.org/TR/css-syntax-3/"
               >CSS Syntax Module Level 3</a
             >
+            <!-- CSS Syntax Module Level 3 history https://www.w3.org/standards/history/css-syntax-3 -->
           </th>
           <td>
             <ul>
@@ -608,14 +767,22 @@
                   >CSS Syntax Module Level 3</a
                 >
               </li>
+              <li class="y2021 m12">
+                <a
+                  href="https://www.w3.org/TR/2021/CRD-css-syntax-3-20211224/"
+                  title="24 December 2021"
+                  >CSS Syntax Module Level 3</a
+                >
+              </li>
             </ul>
           </td>
         </tr>
         <tr>
           <th>
-            <a href="https://www.w3.org/TR/2013/REC-css-style-attr-20131107/"
+            <a href="https://www.w3.org/TR/css-style-attr/"
               >CSS Style Attributes</a
             >
+            <!-- https://www.w3.org/standards/history/css-style-attr -->
           </th>
           <td>
             <ul>
@@ -743,6 +910,7 @@
             <a href="https://www.w3.org/TR/css-cascade-4/"
               >CSS Cascading and Inheritance Level 4</a
             >
+            <!-- https://www.w3.org/standards/history/css-cascade-4 -->
           </th>
           <td>
             <ul>
@@ -774,14 +942,50 @@
                   >CSS Cascading and Inheritance Level 4</a
                 >
               </li>
+              <li class="y2020 m08">
+                <a
+                  href="https://www.w3.org/TR/2020/WD-css-cascade-4-20200818/"
+                  title="18 August 2020"
+                  >CSS Cascading and Inheritance Level 4</a
+                >
+              </li>
+              <li class="y2021 m03">
+                <a
+                  href="https://www.w3.org/TR/2021/WD-css-cascade-4-20210319/"
+                  title="19 March 2021"
+                  >CSS Cascading and Inheritance Level 4</a
+                >
+              </li>
+              <li class="y2021 m10">
+                <a
+                  href="https://www.w3.org/TR/2021/WD-css-cascade-4-20211015/"
+                  title="15 October 2021"
+                  >CSS Cascading and Inheritance Level 4</a
+                >
+              </li>
+              <li class="y2021 m12">
+                <a
+                  href="https://www.w3.org/TR/2021/WD-css-cascade-4-20211203/"
+                  title="3 December 2021"
+                  >CSS Cascading and Inheritance Level 4</a
+                >
+              </li>
+              <li class="y2022 m01">
+                <a
+                  href="https://www.w3.org/TR/2022/CR-css-cascade-4-20220113/"
+                  title="13 January 2022"
+                  >CSS Cascading and Inheritance Level 4</a
+                >
+              </li>
             </ul>
           </td>
         </tr>
         <tr>
           <th>
-            <a href="https://www.w3.org/TR/2012/REC-css3-mediaqueries-20120619/"
-              >Media Queries</a
+            <a href="https://www.w3.org/TR/mediaqueries-3/"
+              >Media Queries Level 3</a
             >
+            <!-- https://www.w3.org/standards/history/mediaqueries-3 -->
           </th>
           <td>
             <ul>
@@ -862,6 +1066,13 @@
                   >Media Queries</a
                 >
               </li>
+              <li class="y2022 m04">
+                <a
+                  href="https://www.w3.org/TR/2022/REC-mediaqueries-3-20220405/"
+                  title="05 April 2022"
+                  >Media Queries Level 3</a
+                >
+              </li>
             </ul>
           </td>
         </tr>
@@ -934,6 +1145,7 @@
             <a href="https://www.w3.org/TR/2018/REC-selectors-3-20181106/"
               >Selectors Level 3</a
             >
+            <!-- https://www.w3.org/standards/history/selectors-3 -->
           </th>
           <td>
             <ul>
@@ -1075,6 +1287,7 @@
             <a href="https://www.w3.org/TR/2013/CR-css3-conditional-20130404/"
               >CSS Conditional Rules Module Level 3</a
             >
+            <!-- https://www.w3.org/standards/history/css-conditional-3 -->
           </th>
           <td>
             <ul>
@@ -1103,6 +1316,27 @@
                 <a
                   href="https://www.w3.org/TR/2013/CR-css3-conditional-20130404/"
                   title="04 April 2013"
+                  >CSS Conditional Rules Module Level 3</a
+                >
+              </li>
+              <li class="y2020 m12">
+                <a
+                  href="https://www.w3.org/TR/2020/CR-css-conditional-3-20201208/"
+                  title="8 December 2020"
+                  >CSS Conditional Rules Module Level 3</a
+                >
+              </li>
+              <li class="y2021 m12">
+                <a
+                  href="https://www.w3.org/TR/2021/CRD-css-conditional-3-20211223/"
+                  title="23 December 2021"
+                  >CSS Conditional Rules Module Level 3</a
+                >
+              </li>
+              <li class="y2022 m01">
+                <a
+                  href="https://www.w3.org/TR/2022/CR-css-conditional-3-20220113/"
+                  title="13 January 2022"
                   >CSS Conditional Rules Module Level 3</a
                 >
               </li>
@@ -1302,9 +1536,10 @@
         </tr>
         <tr>
           <th>
-            <a href="http://www.w3.org/TR/2015/CR-css-variables-1-20151203/"
+            <a href="https://www.w3.org/TR/css-variables-1/"
               >CSS Custom Properties for Cascading Variables Module Level 1</a
             >
+            <!-- https://www.w3.org/standards/history/css-variables-1 -->
           </th>
           <td>
             <ul>
@@ -1343,6 +1578,22 @@
                 <a
                   href="http://www.w3.org/TR/2015/CR-css-variables-1-20151203/"
                   title="03 December 2015"
+                  >CSS Custom Properties for Cascading Variables Module Level
+                  1</a
+                >
+              </li>
+              <li class="y2021 m11">
+                <a
+                  href="https://www.w3.org/TR/2021/CRD-css-variables-1-20211111/"
+                  title="11 November 2021"
+                  >CSS Custom Properties for Cascading Variables Module Level
+                  1</a
+                >
+              </li>
+              <li class="y2022 m06">
+                <a
+                  href="https://www.w3.org/TR/2022/CR-css-variables-1-20220616/"
+                  title="16 June 2022"
                   >CSS Custom Properties for Cascading Variables Module Level
                   1</a
                 >
@@ -1429,6 +1680,7 @@
             <a href="https://www.w3.org/TR/2018/WD-css-box-3-20181218/"
               >CSS Box Model Module Level 3</a
             >
+            <!-- https://www.w3.org/standards/history/css-box-3 -->
           </th>
           <td>
             <ul>
@@ -1471,6 +1723,27 @@
                 <a
                   href="https://www.w3.org/TR/2018/WD-css-box-3-20181218/"
                   title="18 December 2018"
+                  >CSS Box Model Module Level 3</a
+                >
+              </li>
+              <li class="y2020 m04">
+                <a
+                  href="https://www.w3.org/TR/2020/WD-css-box-3-20200421/"
+                  title="21 April 2020"
+                  >CSS Box Model Module Level 3</a
+                >
+              </li>
+              <li class="y2020 m10">
+                <a
+                  href="https://www.w3.org/TR/2020/WD-css-box-3-20201028/"
+                  title="28 October 2020"
+                  >CSS Box Model Module Level 3</a
+                >
+              </li>
+              <li class="y2020 m12">
+                <a
+                  href="https://www.w3.org/TR/2020/CR-css-box-3-20201222/"
+                  title="22 December 2020"
                   >CSS Box Model Module Level 3</a
                 >
               </li>
@@ -1581,9 +1854,10 @@
         </tr>
         <tr>
           <th>
-            <a href="https://www.w3.org/TR/2018/REC-css-color-3-20180619/"
+            <a href="https://www.w3.org/TR/css-color-3/"
               >CSS Color Module Level 3</a
             >
+            <!-- https://www.w3.org/standards/history/css-color-3 -->
           </th>
           <td>
             <ul>
@@ -1671,6 +1945,20 @@
                   >CSS Color Module Level 3</a
                 >
               </li>
+              <li class="y2021 m08">
+                <a
+                  href="https://www.w3.org/TR/2021/REC-css-color-3-20210805/"
+                  title="05 August 2021"
+                  >CSS Color Module Level 3</a
+                >
+              </li>
+              <li class="y2022 m01">
+                <a
+                  href="https://www.w3.org/TR/2022/REC-css-color-3-20220118/"
+                  title="18 January 2022"
+                  >CSS Color Module Level 3</a
+                >
+              </li>
             </ul>
           </td>
         </tr>
@@ -1726,9 +2014,10 @@
         </tr>
         <tr>
           <th>
-            <a href="https://www.w3.org/TR/2017/CR-css-backgrounds-3-20171017/"
+            <a href="https://www.w3.org/TR/css-backgrounds-3/"
               >CSS Backgrounds and Borders Module Level 3</a
             >
+            <!-- https://www.w3.org/standards/history/css-backgrounds-3 -->
           </th>
           <td>
             <ul>
@@ -1844,15 +2133,29 @@
                   >CSS Backgrounds and Borders Module Level 3</a
                 >
               </li>
+              <li class="y2020 m12">
+                <a
+                  href="https://www.w3.org/TR/2020/CR-css-backgrounds-3-20201222/"
+                  title="22 December 2020"
+                  >CSS Backgrounds and Borders Module Level 3</a
+                >
+              </li>
+              <li class="y2021 m07">
+                <a
+                  href="https://www.w3.org/TR/2021/CRD-css-backgrounds-3-20210726/"
+                  title="26 July 2021"
+                  >CSS Backgrounds and Borders Module Level 3</a
+                >
+              </li>
             </ul>
           </td>
         </tr>
         <tr>
           <th>
-            <a
-              href="https://www.w3.org/TR/2019/REC-css-writing-modes-3-20191210/"
+            <a href="https://www.w3.org/TR/css-writing-modes-3/"
               >CSS Writing Modes Level 3</a
             >
+            <!-- https://www.w3.org/standards/history/css-writing-modes-3 -->
           </th>
           <td>
             <ul>
@@ -1947,6 +2250,13 @@
                   >CSS Writing Modes Level 3</a
                 >
               </li>
+              <li class="y2019 m09">
+                <a
+                  href="https://www.w3.org/TR/2019/CR-css-writing-modes-3-20190903/"
+                  title="3 September 2019"
+                  >CSS Writing Modes Level 3</a
+                >
+              </li>
               <li class="y2019 m10">
                 <a
                   href="https://www.w3.org/TR/2019/PR-css-writing-modes-3-20191024/"
@@ -1999,7 +2309,7 @@
         </tr>
         <tr>
           <th>
-            <a href="https://www.w3.org/TR/2019/WD-css-text-3-20191113/"
+            <a href="https://www.w3.org/TR/css-text-3/"
               >CSS Text Module Level 3</a
             >
           </th>
@@ -2217,9 +2527,10 @@
         </tr>
         <tr>
           <th>
-            <a href="https://www.w3.org/TR/2018/REC-css-fonts-3-20180920/"
+            <a href="https://www.w3.org/TR/css-fonts-3/"
               >CSS Fonts Module Level 3</a
             >
+            <!-- https://www.w3.org/standards/history/css-fonts-3 -->
           </th>
           <td>
             <ul>
@@ -2228,6 +2539,13 @@
                   href="https://www.w3.org/TR/WD-font-970721"
                   title="21 July 1997"
                   >Web Fonts</a
+                >
+              </li>
+              <li class="y1998 m05">
+                <a
+                  href="https://www.w3.org/TR/1998/REC-CSS2-19980512/fonts.html"
+                  title="12 May 1998"
+                  >Fonts</a
                 >
               </li>
               <li class="y2001 m07">
@@ -2242,6 +2560,13 @@
                   href="https://www.w3.org/TR/2002/WD-css3-webfonts-20020802"
                   title="02 August 2002"
                   >CSS3 module: Web Fonts</a
+                >
+              </li>
+              <li class="y2002 m08">
+                <a
+                  href="https://www.w3.org/TR/2002/WD-css3-fonts-20020802/"
+                  title="02 August 2002"
+                  >CSS3 module: Fonts</a
                 >
               </li>
               <li class="y2009 m06">
@@ -2269,6 +2594,13 @@
                 <a
                   href="https://www.w3.org/TR/2012/WD-css3-fonts-20120823"
                   title="23 August 2012"
+                  >CSS Fonts Module Level 3</a
+                >
+              </li>
+              <li class="y2012 m12">
+                <a
+                  href="https://www.w3.org/TR/2012/WD-css3-fonts-20121211/"
+                  title="11 December 2012"
                   >CSS Fonts Module Level 3</a
                 >
               </li>
@@ -2304,6 +2636,13 @@
                 <a
                   href="https://www.w3.org/TR/2018/CR-css-fonts-3-20180626/"
                   title="26 June 2018"
+                  >CSS Fonts Module Level 3</a
+                >
+              </li>
+              <li class="y2018 m08">
+                <a
+                  href="https://www.w3.org/TR/2018/PR-css-fonts-3-20180814/"
+                  title="14 August 2018"
                   >CSS Fonts Module Level 3</a
                 >
               </li>
@@ -2471,9 +2810,10 @@
         </tr>
         <tr>
           <th>
-            <a href="https://www.w3.org/TR/2019/WD-css-multicol-1-20191015/"
+            <a href="https://www.w3.org/TR/css-multicol-1/"
               >CSS Multi-column Layout Module Level 1</a
             >
+            <!-- https://www.w3.org/standards/history/css-multicol-1 -->
           </th>
           <td>
             <ul>
@@ -2547,6 +2887,20 @@
                   >CSS Multi-column Layout Module Level 1</a
                 >
               </li>
+              <li class="y2021 m02">
+                <a
+                  href="https://www.w3.org/TR/2021/WD-css-multicol-1-20210212/"
+                  title="12 February 2021"
+                  >CSS Multi-column Layout Module Level 1</a
+                >
+              </li>
+              <li class="y2021 m10">
+                <a
+                  href="https://www.w3.org/TR/2021/CR-css-multicol-1-20211012/"
+                  title="12 October 2021"
+                  >CSS Multi-column Layout Module Level 1</a
+                >
+              </li>
             </ul>
           </td>
         </tr>
@@ -2605,9 +2959,10 @@
         </tr>
         <tr>
           <th>
-            <a href="https://www.w3.org/TR/2018/CR-css-flexbox-1-20181119/"
+            <a href="https://www.w3.org/TR/css-flexbox-1/"
               >CSS Flexible Box Layout Module Level 1</a
             >
+            <!-- https://www.w3.org/standards/history/css-flexbox-1 -->
           </th>
           <td>
             <ul>
@@ -2712,9 +3067,10 @@
             </ul>
           </td>
         </tr>
+        <!-- Below are not checked -->
         <tr>
           <th>
-            <a href="https://www.w3.org/TR/2017/CR-css-grid-1-20171214/"
+            <a href="https://www.w3.org/TR/css-grid-1/"
               >CSS Grid Layout Module Level 1</a
             >
           </th>
@@ -3304,7 +3660,7 @@
         </tr>
         <tr>
           <th>
-            <a href="https://www.w3.org/TR/2015/CR-css-will-change-1-20151203/"
+            <a href="https://www.w3.org/TR/css-will-change-1/"
               >CSS Will Change Module Level 1</a
             >
           </th>
@@ -3630,8 +3986,7 @@
         </tr>
         <tr>
           <th>
-            <a
-              href="https://www.w3.org/TR/2017/CR-css-counter-styles-3-20171214/"
+            <a href="https://www.w3.org/TR/css-counter-styles-3/"
               >CSS Counter Styles Level 3</a
             >
           </th>
@@ -3867,7 +4222,7 @@
         </tr>
         <tr>
           <th>
-            <a href="https://www.w3.org/TR/2014/REC-css-namespaces-3-20140320/"
+            <a href="https://www.w3.org/TR/css-namespaces/"
               >CSS Namespaces Module Level 3</a
             >
           </th>
@@ -3973,7 +4328,7 @@
         </tr>
         <tr>
           <th>
-            <a href="https://www.w3.org/TR/2019/REC-css-contain-1-20191121/"
+            <a href="https://www.w3.org/TR/css-contain-1/"
               >CSS Containment Module Level 1</a
             >
           </th>
@@ -4040,7 +4395,7 @@
         </tr>
         <tr>
           <th>
-            <a href="https://www.w3.org/TR/2019/CR-css-images-3-20191010/"
+            <a href="https://www.w3.org/TR/css-images-3/"
               >CSS Images Module Level 3</a
             >
           </th>
@@ -4264,82 +4619,7 @@
             </ul>
           </td>
         </tr>
-        <tr>
-          <th>
-            <a href="http://www.w3.org/TR/2014/NOTE-css-mobile-20141014/"
-              >CSS Mobile Profile 2.0 (discontinued)</a
-            >
-          </th>
-          <td>
-            <ul>
-              <li class="y2000 m10">
-                <a
-                  href="https://www.w3.org/TR/2000/WD-css-mobile-20001013"
-                  title="13 October 2000"
-                  >CSS Mobile Profile 1.0</a
-                >
-              </li>
-              <li class="y2001 m01">
-                <a
-                  href="https://www.w3.org/TR/2001/WD-css-mobile-20010129/"
-                  title="29 January 2001"
-                  >CSS Mobile Profile 1.0</a
-                >
-              </li>
-              <li class="y2001 m10">
-                <a
-                  href="https://www.w3.org/TR/2001/CR-css-mobile-20011024"
-                  title="24 October 2001"
-                  >CSS Mobile Profile 1.0</a
-                >
-              </li>
-              <li class="y2002 m07">
-                <a
-                  href="https://www.w3.org/TR/2002/CR-css-mobile-20020725"
-                  title="25 July 2002"
-                  >CSS Mobile Profile 1.0</a
-                >
-              </li>
-              <li class="y2006 m12">
-                <a
-                  href="https://www.w3.org/TR/2006/WD-css-mobile-20061208"
-                  title="08 December 2006"
-                  >CSS Mobile Profile 2.0</a
-                >
-              </li>
-              <li class="y2007 m10">
-                <a
-                  href="https://www.w3.org/TR/2007/WD-css-mobile-20071019"
-                  title="19 October 2007"
-                  >CSS Mobile Profile 2.0</a
-                >
-              </li>
-              <li class="y2008 m08">
-                <a
-                  href="https://www.w3.org/TR/2008/CR-css-mobile-20080801"
-                  title="01 August 2008"
-                  >CSS Mobile Profile 2.0</a
-                >
-              </li>
-              <li class="y2008 m12">
-                <a
-                  href="https://www.w3.org/TR/2008/CR-css-mobile-20081210"
-                  title="10 December 2008"
-                  >CSS Mobile Profile 2.0</a
-                >
-              </li>
-              <li class="y2014 m10">
-                <a
-                  href="http://www.w3.org/TR/2014/NOTE-css-mobile-20141014/"
-                  title="14 October 2014"
-                  >CSS Mobile Profile 2.0 (discontinued)</a
-                >
-              </li>
-            </ul>
-          </td>
-        </tr>
       </table>
-      <pre></pre>
     </div>
   </body>
 </html>
