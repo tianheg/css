@@ -14,8 +14,8 @@ createApp({
     }
     return {
       msg: 'Hello Vue!',
-      days: returnDays(4),
-      dates: ['0727', '0729', '0803', '0811'],
+      days: returnDays(5),
+      dates: ['0727', '0729', '0803', '0811', '0815'],
     };
   },
 }).mount('#app');
