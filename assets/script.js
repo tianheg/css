@@ -13,9 +13,8 @@ createApp({
       return days;
     }
     return {
-      msg: 'Hello Vue!',
-      days: returnDays(6),
-      dates: ['0727', '0729', '0803', '0811', '0815', '0816'],
+      weeks: ['一', '二', '三', '四', '五', '六', '日'],
+      days: returnDays(7),
     };
   },
 }).mount('#app');

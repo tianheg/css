@@ -1,50 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Zen Garden</title>
-    <link rel="stylesheet" href="./assets/fonts.css" />
-    <link rel="stylesheet" href="./assets/style.css" />
-    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
-  </head>
-  <body>
-    <main>
-      <h1>CSS Zen Garden</h1>
 
-      <h2>CSS Module Timelines</h2>
-      <iframe src="./css-module-timelines/" frameborder="0"></iframe>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Zen Garden</title>
+  <link rel="stylesheet" href="./assets/fonts.css" />
+  <link rel="stylesheet" href="./assets/style.css" />
+  <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script> -->
+</head>
 
-      <h2>CSS 30 days</h2>
-      <div id="app">
-        <table>
-          <thead>
-            <tr>
-              <th v-for="date in dates" :key="date">{{ date }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td v-for="day in days" :key="day">
-                <a :href="day.url">{{ day.day }}</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+<body>
+  <main>
+    <h1>CSS Zen Garden</h1>
 
-      <footer>
-        <h2>Refers</h2>
-        <ul>
-          <li>
-            <a href="http://www.csszengarden.com/" target="_blank"
-              >CSS Zen Garden (Original)</a
-            >
-          </li>
-        </ul>
-      </footer>
-    </main>
-    <script src="assets/script.js"></script>
-  </body>
+    <h2>CSS Module Timelines</h2>
+    <iframe src="./css-module-timelines/" frameborder="0"></iframe>
+
+    <h2>CSS 30 days</h2>
+    <div id="app">
+      <table>
+        <tr>
+          <th>Day 1</th>
+          <th>Day 2</th>
+          <th>Day 3</th>
+          <th>Day 4</th>
+          <th>Day 5</th>
+        </tr>
+        <tr>
+          <td>
+            <a href="./days/first-30-days/1/">0727</a>
+          </td>
+          <td>
+            <a href="./days/first-30-days/2/">0729</a>
+          </td>
+          <td>
+            <a href="./days/first-30-days/3/">0803</a>
+          </td>
+          <td>
+            <a href="./days/first-30-days/4/">0811</a>
+          </td>
+          <td>
+            <a href="./days/first-30-days/5/">0815</a>
+          </td>
+        </tr>
+        <tr>
+          <th>Day 6</th>
+          <th>Day 7</th>
+          <th>Day 8</th>
+          <th>Day 9</th>
+          <th>Day 10</th>
+        </tr>
+        <tr>
+          <td>
+            <a href="./days/first-30-days/6/">0816</a>
+          </td>
+          <td>
+            <a href="./days/first-30-days/7/">1121</a>
+          </td>
+          <!-- <td>
+            <a href="./days/first-30-days/8/"></a>
+          </td>
+          <td>
+            <a href="./days/first-30-days/9/"></a>
+          </td>
+          <td>
+            <a href="./days/first-30-days/10/"></a>
+          </td> -->
+        </tr>
+      </table>
+    </div>
+
+    <footer>
+      <h2>Refers</h2>
+      <ul>
+        <li>
+          <a href="http://www.csszengarden.com/" target="_blank">CSS Zen Garden (Original)</a>
+        </li>
+      </ul>
+    </footer>
+  </main>
+  <script src="assets/script.js"></script>
+</body>
+
 </html>
