@@ -21,16 +21,13 @@
         <table>
           <thead>
             <tr>
-              <th>0727</th>
-              <th>0729</th>
-              <th>0803</th>
-              <th>0811</th>
+              <th v-for="date in dates" :key="date">{{ date }}</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td v-for="dayX in days" :key="dayX">
-                <a :href="dayX.url">{{ dayX.day }}</a>
+              <td v-for="day in days" :key="day">
+                <a :href="day.url">{{ day.day }}</a>
               </td>
             </tr>
           </tbody>

@@ -1,14 +1,21 @@
 const { createApp } = Vue;
 createApp({
   data() {
+    function returnDays(day) {
+      let days = [];
+      const first30 = './days/first-30-days/';
+      for (let i = 1; i <= day; i++) {
+        let dayX = {};
+        dayX.url = first30 + i;
+        dayX.day = i;
+        days.push(dayX);
+      }
+      return days;
+    }
     return {
       msg: 'Hello Vue!',
-      days: [
-        { url: './days/first-30-days/1', day: 1 },
-        { url: './days/first-30-days/2', day: 2 },
-        { url: './days/first-30-days/3', day: 3 },
-        { url: './days/first-30-days/4', day: 4 },
-      ],
+      days: returnDays(4),
+      dates: ['0727', '0729', '0803', '0811'],
     };
   },
 }).mount('#app');
