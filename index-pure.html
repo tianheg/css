@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Zen Garden</title>
+    <link rel="stylesheet" href="./assets/modern-normalize.css" />
     <link rel="stylesheet" href="./assets/fonts.css" />
-    <link rel="stylesheet" href="./assets/style.css" />
-    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <!-- <link rel="stylesheet" href="./assets/style.css" /> -->
   </head>
   <body>
     <main>
@@ -17,25 +17,31 @@
       <iframe src="./css-module-timelines/" frameborder="0"></iframe>
 
       <h2>CSS 30 days</h2>
-      <div id="app">
-        <table>
-          <thead>
-            <tr>
-              <th>0727</th>
-              <th>0729</th>
-              <th>0803</th>
-              <th>0810</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td v-for="dayX in days" :key="dayX">
-                <a :href="dayX.url">{{ dayX.day }}</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+
+      <div id="react-test" style="height: 100px;"></div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>0727</th>
+            <th>0729</th>
+            <th>0803</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="./days/first-30-days/1/">1</a>
+            </td>
+            <td>
+              <a href="./days/first-30-days/2/">2</a>
+            </td>
+            <td>
+              <a href="./days/first-30-days/3/">3</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
       <footer>
         <h2>Refers</h2>
@@ -48,6 +54,7 @@
         </ul>
       </footer>
     </main>
-    <script src="assets/script.js"></script>
+    <script>
+    </script>
   </body>
 </html>

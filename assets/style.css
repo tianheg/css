@@ -40,7 +40,7 @@ body::after {
   margin: 0 auto;
 }
 
-main {
+.main {
   width: 100%;
   margin: 0.25em auto;
   max-width: 1800px;
@@ -48,7 +48,7 @@ main {
   padding: 0 4%;
 }
 
-main::before {
+.main::before {
   content: "";
   height: 20px;
   background: url('img/lg-horiz-border.png') repeat-x 0 -2px;
@@ -56,7 +56,7 @@ main::before {
   display: block;
 }
 
-main::after {
+.main::after {
   content: "";
   height: 20px;
   background: url('img/lg-horiz-border.png') repeat-x;
@@ -126,7 +126,7 @@ h1 {
     z-index: -2;
   }
 
-  main {
+  .main {
     width: 99%;
     background: url('img/lg-vert-border.png') repeat-y top left, url('img/lg-vert-border.png') repeat-y right 100px;
     background-size: 0.75em;
