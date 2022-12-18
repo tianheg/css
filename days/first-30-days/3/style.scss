@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  background-color: grey;
+}
+
+// margin, padding only with <body> work, not <html>
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 2rem 1rem;
+  padding: 0 1rem;
+  position: relative;
+  border: 1.2rem dotted #b3a9a9;
+  border-radius: 1.2rem 1.2rem 1.2rem 1.2rem;
+
+  .flexbox {
+    display: flex;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 4rem;
+    text-shadow: .1em .1em .1em rgb(4, 255, 0);
+
+    &:hover {
+      // box-shadow: inset 0 0 .2em rgba(255, 255, 255, 0.05),
+      //   inset .4em .4em .6em rgba(0, 0, 0, 0.2);
+      color: yellow;
+      text-shadow: 0 0 1.5em yellow, 0 0 2.5em yellow;
+      animation: glow 1.5s linear infinite;
+    }
+
+    @keyframes glow {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+  }
+
+  img {
+    aspect-ratio: auto 16 / 9;
+    height: 6.7rem;
+    margin: 2rem 0 0 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 2;
+    letter-spacing: .05em;
+  }
+}
