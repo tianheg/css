@@ -70,13 +70,12 @@ main {
     letter-spacing: 0.1rem;
 
     a {
-      display: inline-block;
       color: inherit;
       text-underline-offset: 0.5rem;
 
       &:hover {
         color: rgba(42, 109, 244, 1);
-        font-size: 25px;
+        font-size: 2rem;
       }
 
       &[href^='http'] {
@@ -240,7 +239,7 @@ main {
     }
     & > p {
       width: 500px; // fallback for old browser not support calc()
-      width: calc(100% - 400px);
+      width: calc(100% - 40px);
     }
   }
 

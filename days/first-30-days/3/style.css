@@ -60,13 +60,12 @@ main p {
   letter-spacing: 0.1rem;
 }
 main p a {
-  display: inline-block;
   color: inherit;
   text-underline-offset: 0.5rem;
 }
 main p a:hover {
   color: rgb(42, 109, 244);
-  font-size: 25px;
+  font-size: 2rem;
 }
 main p a[href^=http] {
   background: url("external-link-52.png") no-repeat 100% 0;
@@ -184,7 +183,7 @@ main .css-work > img {
 }
 main .css-work > p {
   width: 500px;
-  width: calc(100% - 400px);
+  width: calc(100% - 40px);
 }
 main .get-scss-content {
   margin: 1rem 0 1rem 0;
