@@ -167,5 +167,240 @@
       }
     }
   </css-doodle>
+  <br>
+  <css-doodle grid="5">
+    :doodle {
+      @size: 8em;
+      grid-gap: 1px;
+    }
+    background: #f5f5f5;
+    @at(5, 3) {
+      background: #60569e;
+      :after {
+        content: @x, @y;
+        font-size: .5em;
+        color: #fff;
+      }
+    }
+  </css-doodle>
+  <br>
+  <css-doodle grid="5" click-to-update>
+    :doodle {
+      @size: 8em;
+      grid-gap: 1px;
+    }
+    background: #f5f5f5;
+    transition: .2s;
+    @random {
+      background: #60569e;
+      :after {
+        content: @index;
+        font-size: .8em;
+        color: #fff;
+      }
+    }
+    cursor: pointer;
+  </css-doodle>
+  <br>
+  <css-doodle grid="16" click-to-update>
+    :doodle {
+      @size: 8em;
+    }
+    margin: -.5em;
+    @random {
+      border-top: 1px solid #60569e;
+    }
+    @random {
+      border-left: 1px solid #60569e;
+    }
+    @random(.2) {
+      :after {
+        content: '';
+        background: hsl(@rand(360), 100%, 60%);
+        @size: @rand(30px);
+      }
+    }
+    cursor: pointer;
+  </css-doodle>
+  <br>
+  <css-doodle grid="5">
+    :doodle {
+      @size: 8em;
+    }
+    background: #f5f5f5;
+    margin: .5px;
+    @row(even) {
+      background: #60569e;
+      :after {
+        content: @row;
+        font-size: .8em;
+        color: #fff;
+      }
+    }
+    @row(odd) {
+      background: #605;
+      :after {
+        content: @row;
+        font-size: .8em;
+        color: #fff;
+      }
+    }
+  </css-doodle>
+  <br>
+  <css-doodle grid="5">
+    :doodle {
+      @size: 8em;
+    }
+    background: #f5f5f5;
+    margin: .5px;
+    @col(even) {
+      background: #60569e;
+      :after {
+        content: @col;
+        font-size: .8em;
+        color: #fff;
+      }
+    }
+    @col(odd) {
+      background: #605;
+      :after {
+        content: @col;
+        font-size: .8em;
+        color: #fff;
+      }
+    }
+  </css-doodle>
+  <br>
+  <css-doodle grid="5">
+    :doodle {
+      @size: 8em;
+    }
+    background: #f5f5f5;
+    margin: .5px;
+    @match(i < 8 || i >= 18) {
+      background: #60569e;
+      :after {
+        content: @i;
+        font-size: .8em;
+        color: #fff;
+      }
+    }
+  </css-doodle>
+  <br>
+  <css-doodle grid="10">
+    :doodle {
+      @size: 8em;
+    }
+    background: #f5f5f5;
+    margin: .5px;
+    @match(x >= y) {
+      background: #60569e;
+    }
+  </css-doodle>
+  <br>
+  <css-doodle grid="10">
+    :doodle {
+      @size: 8em;
+    }
+    background: #f5f5f5;
+    margin: .5px;
+    @match(x = y) {
+      background: #60569e;
+    }
+    @match(X-x+1 == y) {
+      background: #60569e;
+    }
+  </css-doodle>
+  <br>
+  <css-doodle grid="21">
+    :doodle {
+      @size: 8em;
+    }
+    background: #f5f5f5;
+    @match(tan.cos.sin(x*y) > 1) {
+      background: #60569e;
+    }
+  </css-doodle>
+  <br>
+  <css-doodle>
+    :doodle {
+      @grid: 1 / 8em 8em / #125cde;
+      @content: @Svg(
+        viewBox: -50 -50 100 100 padding -20;
+        circle*500 {
+          fill: hsl(@calc(120-90*@sin.n), 80%, 50%);
+          r: @sqrt(@n/60);
+          cx: @calc(@n*.618^4 * cos(2π*@n*.618));
+          cy: @calc(@n*.618^4 * sin(2&#960;*@n*.618));
+          /* π HTML entity: &#960; */
+        }
+      );
+    }
+  </css-doodle>
+  <br>
+  <style>
+    :root {
+      --rule-a: (
+        @grid: 5 / 8em;
+        clip-path: circle(100% at 0 0);
+        background: #60569e;
+      );
+      --rule-b: (
+        background-image: radial-gradient(#fff 50%, #0000 0);
+        background-position: -25% -25%;
+        background-size: @r(40%, 80%) @lr();
+        background-repeat: no-repeat;
+      )
+    }
+  </style>
+  <css-doodle>
+    @use: var(--rule-a), var(--rule-b);
+  </css-doodle>
+  <br>
+  <css-doodle>
+    :doodle {
+      @grid: 1x5 / 8em noclip;
+      border: 1px solid #60569e;
+    }
+    @size: 1.6em;
+    background: rgba(72, 74, 142, .8);
+    @nth(1) { @place: 0 top; }
+    @nth(2) { @place: right 25%; }
+    @nth(3) { @place: center; }
+    @nth(4) { @place: .8em calc(100% - .8em); }
+    @nth(5) { @place: 75% bottom; }
+    :after {
+      content: @index;
+      color: #fff;
+      font-size: .8em;
+    }
+  </css-doodle>
+  <br>
+  <css-doodle>
+    :doodle {
+      @grid: 7 / 8em;
+      @shape: circle;
+    }
+    @even {
+      @shape: hypocycloid 3;
+      background: #60569e;
+      transform: scale(2) rotate(-60deg);
+    }
+  </css-doodle>
+  <br>
+  
+  <css-doodle click-to-update>
+    <style>
+      @grid: 7 / 8em / #0a0c27;
+      @shape: clover 5;
+      background: hsla(-@i(*4), 70%, 68%, @r.8);
+      transform:
+        scale(@r(.2, 1.5))
+        translate(@m2.@r(±50%));
+      cursor: pointer;
+    </style>
+  </css-doodle>
+  <br>
+  
 </body>
 </html>
