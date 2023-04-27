@@ -172,3 +172,49 @@ footer a {
   color: #fff;
   background: #3b0281;
 }
+
+@media (min-width: 600px) {
+  body {
+    font-size: 1.12em;
+    line-height: 1.6;
+  }
+
+  body::before {
+    border-left: 89px solid #faf3e6;
+    border-right: 89px solid #faf3e6;
+    border-top: 89px solid transparent;
+    margin: 0 auto -5em;
+  }
+
+  body::after {
+    border-left: 11em solid #faf3e6;
+    border-right: 11em solid #faf3e6;
+    border-bottom: 14.5em solid transparent;
+    margin: -14.5em auto 0;
+    position: relative;
+    z-index: -2;
+  }
+
+  .main {
+    width: 99%;
+    background: url('img/lg-vert-border.png') repeat-y top left, url('img/lg-vert-border.png') repeat-y right 100px;
+    background-size: 0.75em;
+    margin: 0.5em auto;
+    padding: 0 2em;
+  }
+
+  h1 {
+    font-size: 5.25em;
+    line-height: 1;
+    max-width: 94%;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 3.75em;
+    padding-top: 1.25em;
+    margin-top: 0.85em;
+    margin-bottom: 0;
+    line-height: 1.275em;
+  }
+}
