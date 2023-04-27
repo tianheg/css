@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><css-doodle /></title>
+  <script src="https://unpkg.com/css-doodle/css-doodle.min.js"></script>
+  <style>
+    *,
+    ::before,
+    ::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    css-doodle {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <css-doodle grid="5">
+    :doodle {
+      grid-gap: 2px;
+      width: 8em; height: 8em;
+    }
+    background: #60569e;
+  </css-doodle>
+  <br>
+  <css-doodle grid="1x10">
+    :doodle {
+      grid-row-gap: 3px;
+      @size: 8em; /* width: 8em; height: 8em; */
+    }
+    background: #60569e;
+    width: @rand(5%, 100%) /* from 5% to 100% by random */
+  </css-doodle>
+  <br>
+  <css-doodle>
+    :doodle {
+      @grid: 5 / 8em;
+    }
+    background: #60569e;
+    transform: scale(@rand(.2, .9));
+  </css-doodle>
+  <br>
+  <style>
+    css-doodle {
+      --rule: (
+        @grid: 5 / 8em;
+        --d: @p(-15deg, -35deg, -55deg, 360deg);
+        --lg: linear-gradient(@var(--d), #60569e 50%, #0000 0);
+        background:
+          @var(--lg) 0 0 / 100% 100%,
+          @var(--lg) 0 0 / 50% 50%;
+      );
+    }
+  </style>
+  <css-doodle use="var(--rule)"></css-doodle>
+  <br>
+  <css-doodle seed="2023">
+    :doodle {
+      @grid: 5 / 8em;
+    }
+    background: #60569e;
+    transform: scale(@rand(.2, .9));
+  </css-doodle>
+  <br>
+  <css-doodle>
+    @grid: 1 / 8em / #0a0c27;
+    background-size: 200px 200px;
+    background-image: @doodle(
+      @grid: 6 / 100%;
+      @size: 4px;
+      font-size: 4px;
+      color: hsl(@r240, 30%, 50%);
+      box-shadow: @m3x5(
+        calc(4em - @nx*1em) @ny(*1em)
+          @p(@m3(currentColor), @m2(#0000)),
+        calc(2em + @nx*1em) @ny(*1em)
+          @lp
+      );
+    );
+  </css-doodle>
+  <br>
+  <css-doodle>
+    :doodle {
+      @grid: 5 / 8em;
+      --s: 0;
+      grid-gap: 1px;
+    }
+    :doodle(:hover) { --s: 1 }
+
+    transform: translateY(calc(var(--s) * 100%));
+    transition: .5s cubic-bezier(.175, .885, .32, 1.275);
+    transtion-delay: @rand(500ms);
+
+    transform-origin: 50% 50%;
+    background: #60569e;
+  </css-doodle>
+  <br>
+  <css-doodle>
+    :doodle {
+      @grid: 8 / 8em;
+      overflow: hidden;
+    }
+    :container {
+      grid-gap: 1px;
+      transform: rotate(45deg) scale(1.5);
+    }
+    /* inherits all the grid properties from :doodle */
+
+    background: #60569e;
+  </css-doodle>
+  <br>
+  <css-doodle>
+    :doodle {
+      @grid: 5 / 8em;
+      grid-gap: 1px;
+    }
+    background: #f5f5f5;
+    :nth-child(1) {
+      background: #60569e;
+    }
+    @nth(5) {
+      background: #60569e;
+    }
+    @nth(3n + 8) {
+      background: #e6437d;
+    }
+    @nth(1, 5, 3n + 8) {
+      :after {
+        content: @index;
+        color: #fff;
+      }
+    }
+  </css-doodle>
+  <br>
+  <css-doodle grid="5">
+    :doodle {
+      @size: 8em;
+    }
+    @even {
+      background: #60569e;
+      :after {
+        content: @index;
+        font-size: .8em;
+        color: #fff;
+      }
+    }
+  </css-doodle>
+  <br>
+  <css-doodle grid="5">
+    :doodle {
+      @size: 8em;
+    }
+    @odd {
+      background: #60569e;
+      :after {
+        content: @index;
+        font-size: .8em;
+        color: #fff;
+      }
+    }
+  </css-doodle>
+</body>
+</html>
