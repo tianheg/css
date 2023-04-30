@@ -20,6 +20,10 @@
     css-doodle {
       margin: 10px;
     }
+
+    css-doodle[click-to-update] {
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -199,7 +203,6 @@
         color: #fff;
       }
     }
-    cursor: pointer;
   </css-doodle>
   <br>
   <css-doodle grid="16" click-to-update>
@@ -220,7 +223,6 @@
         @size: @rand(30px);
       }
     }
-    cursor: pointer;
   </css-doodle>
   <br>
   <css-doodle grid="5">
@@ -388,19 +390,259 @@
     }
   </css-doodle>
   <br>
-  
   <css-doodle click-to-update>
-    <style>
-      @grid: 7 / 8em / #0a0c27;
-      @shape: clover 5;
-      background: hsla(-@i(*4), 70%, 68%, @r.8);
-      transform:
-        scale(@r(.2, 1.5))
-        translate(@m2.@r(±50%));
-      cursor: pointer;
-    </style>
+    @grid: 7 / 8em / #0a0c27;
+    @shape: clover 5;
+    background: hsla(-@i(*4), 70%, 68%, @r.8);
+    transform:
+      scale(@r(.2, 1.5))
+      translate(@m2.@r(±50%));
   </css-doodle>
   <br>
-  
+  <css-doodle grid="5" click-to-update>
+    :doodle { @size: 8em; }
+    background: rgba(96, 86, 158, @rand(.9));
+    transtion: .2s ease @rand(200ms);
+    will-change: transform;
+    transform: rotate(@rand(360deg));
+    clip-path: polygon(
+      @rand(100%) 0, 100% @rand(100%), 0 @rand(100%)
+    );    
+  </css-doodle>
+  <br>
+  <css-doodle grid="5" click-to-update>
+    :doodle { @size: 8em; }
+    background: linear-gradient(
+      @pick-d(45deg, -45deg),
+      @pick(#60569e, #e6437d),
+      rgba(255, 255, 255, 0),
+      @last-pick()
+    )
+  </css-doodle>
+  <br>
+  <css-doodle grid="5" click-to-update>
+    :doodle { @size: 8em; grid-gap: 1px; }
+    background: #60569e;
+    transition: .2s;
+    transform: scale(.95);
+    border-radius: @repeat(4, @rand(40%, 60%));
+    :after {
+      content: '';
+      position: absolute;
+      transition: .2s;
+      left: @rand(20%, 80%);
+      top: @rand(20%, 80%);
+      @size: 5px;
+      border-radius: 50%;
+      background: #@repeat(6, @p([0-9a-f]));
+    }
+  </css-doodle>
+  <br>
+  <css-doodle grid="5" click-to-update>
+    :doodle { @size: 8em; }
+    background: linear-gradient(
+      @rand(360deg),
+      @m3(
+        @pick-n(#60569e, #e6437d, #ebbf4d)
+          calc(@n(-1) * 100% / 3),
+        @lp
+          calc(@n * 100% / 3)
+      )
+    );
+  </css-doodle>
+  <br>
+  <css-doodle grid="5" click-to-update>
+    :doodle { @size: 8em; }
+    background: linear-gradient(
+      @rand(360deg),
+      @stripe(
+        #60569e, #e6437d, #ebbf4d
+      )
+    );
+  </css-doodle>
+  <br>
+  <css-doodle grid="5">
+    :doodle { @size: 8em; }
+    background: #60569e;
+    margin: 20%;
+    box-shadow: @m5(
+      calc(@n() * 2px) calc(@n * 2px) 0 0 #e6437d
+    );
+  </css-doodle>
+  <br>
+  <css-doodle grid="1" click-to-update>
+    :doodle { @size: 8em; }
+    background: radial-gradient(
+      circle at @r(100%) @r(100%),
+      @m20(
+        @p(#60569e, #ebbf4d) calc(@n(-1) * 100% / @N),
+        @lp calc(@n * 100% / @N)
+      )
+    );
+  </css-doodle>
+  <br>
+  <css-doodle grid="1">
+    :doodle { @size: 8em; }
+    background: linear-gradient(
+      45deg,
+      @stripe(
+        #60569e 50%, #e6437d, #ebbf4d, #60569e
+      )
+    );
+  </css-doodle>
+  <br>
+  <css-doodle grid="1">
+    :doodle { @size: 8em; }
+    border-radius: 50%;
+    background: conic-gradient(
+      @stripe(
+        #60569e 10%,
+        #e6437d 20%,
+        #ebbf4d 30%,
+        #321f35
+      )
+    );
+  </css-doodle>
+  <br>
+  <css-doodle grid="1" click-to-update>
+    :doodle { @size: 8em; }
+    border-radius: 50%;
+    background: conic-gradient(
+      from @rand(-180deg, 180deg),
+      @stripe.@m(
+        @rand(2, 10),
+        hsl(calc(360 / @N * (@n - 1)), 100%, 48%)
+      )
+    );
+  </css-doodle>
+  <br>
+  <css-doodle grid="1" click-to-update>
+    :doodle { @size: 8em; }
+    background-size: 100%;
+    background-image: @svg(
+      viewBox: 0 0 100 175;
+      path*50 {
+        stroke-width: @r.5;
+        stroke: @p(#60569e, #e6437d);
+        d: M0 0 L@r100 @r175;
+      };
+    );
+  </css-doodle>
+  <br>
+  <css-doodle grid="1">
+    :doodle { @size: 8em; }
+    background: #60569e;
+    border-radius: 50%;
+    filter: @svg-filter(
+      feTurbulence {
+        type: fractalNoise;
+        baseFrequency: .01 .5;
+      }
+      feDisplacementMap {
+        in: SourceGraphic;
+        scale: 40;
+      }
+    )
+  </css-doodle>
+  <br>
+  <css-doodle grid="5">
+    :doodle { @size: 8em; }
+    --alpha: calc(@abs(@abs(@row - 3) + @abs(@col - 3) - 5) / 5);
+    background: rgba(
+      96, 86, 158, var(--alpha)
+    );
+    will-change: transform;
+    transform: rotate(30deg) scale(var(--alpha));
+  </css-doodle>
+  <br>
+  <css-doodle>
+    @grid: 1x60 / 8em 8em;
+    @size: 45% 1px;
+    justify-self: center;
+    background: #60569e;
+    opacity: calc(1 - @i / @size());
+    transform:
+      rotate(-15deg)
+      translateX(calc(@sin(@i / 4) * π * 10px));
+  </css-doodle>
+  <br>
+  <css-doodle>
+    @grid: 5 / 8em;
+    background: #60569e;
+    :after {
+      content: @calc(@i * @i);
+      color: #fff;
+      font-size: .5em;
+    }
+    @odd {
+      transform: scale(.75);
+    }
+  </css-doodle>
+  <br>
+  <css-doodle click-to-update>
+    @grid: 5 / 8em;
+    grid-gap: 1px;
+    :after {
+      content: \@hex(@rand(9632, 9687));
+      color: #60569e;
+    }
+  </css-doodle>
+  <br>
+  <css-doodle click-to-update>
+    @grid: @p(2, 3) / 8em;
+    background-image: @doodle(
+      @grid: @r4 / 100%;
+      background: @svg(
+        viewBox: 0 0 1 1;
+        path {
+          d: M 0 0 L 1 0 L 0 1;
+          fill: #60569e;
+        }
+      )
+    )
+  </css-doodle>
+  <br>
+  <css-doodle>
+    @grid: 1 / 8em;
+    background: @shaders(
+      void main() {
+        vec2 p = gl_FragCoord.xy / u_resolution.xy;
+        FragColor = vec4(p.xy, .8, 1.2);
+      }
+    )
+  </css-doodle>
+  <br>
+  <css-doodle click-to-update>
+    @grid: 1 / 8em;
+    background: @shaders(
+      texture1 {
+        @grid: 1 / 100%;
+        background: linear-gradient(
+          45deg,
+          @stripe.@m20.@p(#fff4e0, #f8b501, #06acb5, #17191d, #fc3d3c)
+        );
+      }
+      fragment {
+        void main() {
+          vec2 p = gl_FragCoord.xy / u_resolution.xy;
+          vec2 c = vec2(.5, .5);
+          vec2 uv = p.xy - c;
+          float R = 3.1415926;
+          float len = length(uv * vec2(u_resolution.x / u_resolution.y, 1.1));
+          float angle = atan(uv.y, uv.x) + R * smoothstep(.75, 0., len);
+          float r = length(uv) + .1;
+          vec2 coords = vec2(r * cos(angle), r * sin(angle)) + c;
+          FragColor = texture(texture1, coords);
+        }
+      }
+    )
+  </css-doodle>
+  <br>
+  <css-doodle click-to-update>
+    @grid: 20 / 8em / #0a0c27;
+    @content: @unicode.r(0x2500, 0x257f);
+    color: hsla(@r360, 70%, 70%, @r.9);
+    font-familt: sans-serif;
+  </css-doodle>
 </body>
 </html>
